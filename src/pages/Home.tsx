@@ -6,19 +6,19 @@ export default function Home() {
       <h1 className="headerGradient">Canvas Games</h1>
       <div className="flex flex-row items-center justify-center gap-16 *:gap-16 *:flex *:flex-col">
         <div>
-          <Card image="img" title="title" description="desc"/>
-          <Card image="img" title="title" description="desc"/>
-          <Card image="img" title="title" description="desc"/>
+          <Card image="img" title="Snake" description="desc" path="/Snake"/>
+          <Card image="img" title="Tic-Tac-Toe" description="desc" path="/TicTacToe"/>
+          <Card image="img" title="title" description="desc" path="/Snake"/>
         </div>
         <div>
-          <Card image="img" title="title" description="desc"/>
-          <Card image="img" title="title" description="desc"/>
-          <Card image="img" title="title" description="desc"/>
+          <Card image="img" title="title" description="desc" path="/Snake"/>
+          <Card image="img" title="title" description="desc" path="/Snake"/>
+          <Card image="img" title="title" description="desc" path="/Snake"/>
         </div>
         <div>
-          <Card image="img" title="title" description="desc"/>
-          <Card image="img" title="title" description="desc"/>
-          <Card image="img" title="title" description="desc"/>
+          <Card image="img" title="title" description="desc" path="/Snake"/>
+          <Card image="img" title="title" description="desc" path="/Snake"/>
+          <Card image="img" title="title" description="desc" path="/Snake"/>
         </div>
       </div>
     </div>
