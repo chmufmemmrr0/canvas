@@ -1,6 +1,6 @@
 import { useRef, useEffect, useState } from "react";
 
-type Point = { x: number; y: number };
+export type Point = { x: number; y: number };
 
 export default function Snake() {
   const canvasRef = useRef<HTMLCanvasElement>(null);

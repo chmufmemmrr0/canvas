@@ -8,7 +8,7 @@ export default function Home() {
         <div>
           <Card image="img" title="Snake" description="desc" path="/Snake"/>
           <Card image="img" title="Tic-Tac-Toe" description="desc" path="/TicTacToe"/>
-          <Card image="img" title="title" description="desc" path="/Snake"/>
+          <Card image="img" title="Avoid the Bombs" description="desc" path="/Bombs"/>
         </div>
         <div>
           <Card image="img" title="title" description="desc" path="/Snake"/>

@@ -19,7 +19,7 @@ export default function Card({ image, title, description, path }: CardProps) {
     };
 
     return (
-        <button className="w-96 h-64 bg-white rounded-lg shadow-md overflow-hidden homeButton" onClick={handleClick}>
+        <button className="w-64 h-48 bg-white rounded-lg shadow-md overflow-hidden homeButton" onClick={handleClick}>
             <h2 className="card-title">{title}</h2>
             <p className="card-content">{}</p>
         </button>
