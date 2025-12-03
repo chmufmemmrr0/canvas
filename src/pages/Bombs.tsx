@@ -18,23 +18,48 @@ export default function Bombs() {
   // sprawdzanie kolizji & ustawianie bomb
   useEffect(() => {
     if (gameover) return;
-
+  
     const interval = setInterval(() => {
-      for(let i=0; i<bombs.length; i++) {
-        if(player.x == bombs[i].x && player.y == bombs[i].y) setGameover(true);
-      }
-
-      const filtered = bombs.filter(b => b.y >= 0);
-
-      for(let i=0; i<bombsAmount-filtered.length; i++) {
-        filtered.push({x: randInt(0, 1000), y: 0})
-      }
-      console.log(filtered)
-      setBomb(filtered);
-    }, 1000)
-
+  
+      setBomb(prev => {
+        // spadanie w dol
+        const moved = prev.map(b => ({
+          ...b,
+          y: b.y + fallingSpeed
+        }));
+  
+        // usuwanie zbednych bomb
+        const filtered = moved.filter(b => b.y <= 550);
+  
+        // generowanie nowych bomb
+        while (filtered.length < bombsAmount) {
+          filtered.push({
+            x: randInt(0, 985),
+            y: 0
+          });
+        }
+  
+        return filtered;
+      });
+  
+      // kolizja
+      setGameover(prevGameover => {
+        if (prevGameover) return true;
+  
+        for (const b of bombs) {
+          const dx = player.x - b.x;
+          const dy = player.y - b.y;
+          if (Math.sqrt(dx*dx + dy*dy) < 20) return true;
+        }
+  
+        return false;
+      });
+  
+    }, 16);
+  
     return () => clearInterval(interval);
-  }, [gameover, player])
+  }, [gameover, player]);
+  
   
 
   // rysowanie planszy
