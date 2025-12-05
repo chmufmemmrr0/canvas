@@ -11,9 +11,9 @@ export default function Home() {
           <Card image="img" title="Avoid the Bombs" description="desc" path="/Bombs"/>
         </div>
         <div>
-          <Card image="img" title="title" description="desc" path="/Snake"/>
-          <Card image="img" title="title" description="desc" path="/Snake"/>
-          <Card image="img" title="title" description="desc" path="/Snake"/>
+          <Card image="img" title="Catch the Fruit" description="desc" path="/Fruit"/>
+          <Card image="img" title="Maze" description="desc" path="/Maze"/>
+          <Card image="img" title="Flappy Bird" description="desc" path="/Bird"/>
         </div>
         <div>
           <Card image="img" title="title" description="desc" path="/Snake"/>
