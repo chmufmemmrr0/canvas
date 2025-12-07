@@ -7,7 +7,7 @@ type CardProps = {
     path?: string;
 };
 
-export default function Card({ image, title, description, path }: CardProps) {
+export default function Card({ /*image,*/ title, /*description,*/ path }: CardProps) {
     const navigate = useNavigate();
 
     const handleClick = () => {
